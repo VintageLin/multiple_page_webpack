@@ -32,3 +32,4 @@
         |-- webpack.prod.js                     // webpack生产环境配置
 
 js目录下，需要创建与pages里面html文件名一样的文件夹，区分目录。
+src目录内的文件均是创建webpack配置时，测试所使用的
