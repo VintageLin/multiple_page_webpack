@@ -1,0 +1,1 @@
+console.log('这是来自ok.js')
