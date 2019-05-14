@@ -26,6 +26,25 @@ const config = {
         })
       },
       {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: [
+              ['env', {
+                targets: {
+                  ie: 7,
+                  chrome: 52
+                }
+              }
+            ]
+          ],
+            plugins: ['transform-runtime']
+          }
+        }
+      },
+      {
         test: /\.(jpg|jpeg|png|webp|gif)$/,
         loader: 'file-loader',
         options: {
