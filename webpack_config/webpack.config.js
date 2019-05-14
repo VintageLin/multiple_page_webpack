@@ -10,11 +10,6 @@ const config = {
     path: path.resolve(__dirname, '../build'),
     filename: 'js/[name].[hash].js'
   },
-  devServer: {
-    contentBase: path.join(__dirname, 'build'),
-    compress: false,
-    port: 9000
-  },
   // loader
   module: {
     rules: [
@@ -46,9 +41,9 @@ const config = {
       },
       {
         test: /\.(jpg|jpeg|png|webp|gif)$/,
-        loader: 'file-loader',
+        loader: 'url-loader',
         options: {
-          limit: 20000,
+          limit: 10000,
           publicPath: '../',                // 为你的文件配置自定义 public 发布目录
           name: 'images/[name].[hash].[ext]',
         }

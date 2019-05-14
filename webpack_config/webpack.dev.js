@@ -6,11 +6,26 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const entries = require('./webpack.entries')
 
 const dev_config = {
-    mode: 'development',
-    plugins: [
-      ...entries.HtmlWebpackPluginArray,
-      new ExtractTextPlugin({filename: `./css/[name].css`}),
-    ]
+  mode: 'development',
+  devServer: {
+    contentBase: path.join(__dirname, 'build'),
+    compress: false,
+    port: 9000,
+    proxy: {
+      '/api': {
+        target: 'http://localhost:8000',    // 请求'api/user'会代理到 'http://localhost:8000/api/user'
+        pathRewrite: {
+          '^/api': ''         // 加了这个请求'api/user'会代理到 'http://localhost:8000/user'
+        },
+        secure: false,        // 是否开启https代理
+        changeOrigin: true
+      }
+    }
+  },
+  plugins: [
+    ...entries.HtmlWebpackPluginArray,
+    new ExtractTextPlugin({filename: `./css/[name].css`}),
+  ]
 }
 
 // 合并设置
