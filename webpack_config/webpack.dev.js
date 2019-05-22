@@ -1,3 +1,4 @@
+const path = require('path')
 // 引用webpack基础设置
 let webpackBaseConfig = require('./webpack.config')
 // 提取css到指定文件
