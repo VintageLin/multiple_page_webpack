@@ -15,8 +15,7 @@ const config = {
   },
   plugins: [
     // 每次打包前清空打包目标文件夹
-    new CleanWebpackPlugin(),
-    
+    new CleanWebpackPlugin()
   ],
   optimization: {
     minimizer: [
