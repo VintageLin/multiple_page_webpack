@@ -1,0 +1,4 @@
+* {padding: 0}
+div {background: red; }
+.flex {display: flex; transition: left 1s ease;}
+.green { background: green; transform: translateX(1px); box-shadow: 0 0 0 #123;}

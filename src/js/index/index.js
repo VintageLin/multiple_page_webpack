@@ -1,41 +1,20 @@
-// import printMe from './print'
-import '../../css/style.css'
-import '../../css/demo.css'
-import { square, cube } from './math'
+import '../../css/index.css'
+console.log('this is index pages alert')
+for (let i = 0; i < 10; i++) {
+    console.log(i)
+}
 
-// function component () {
-//     var element = document.createElement('div')
-//     var btn = document.createElement('button')
+let test = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve('ok')
+    }, 2000)
+})
 
-//     element.innerHTML = 'hello'
-
-//     btn.innerHTML = 'click me and check the console'
-
-//     btn.onclick = printMe
-
-//     element.appendChild(btn)
-
-//     console.log(square(5))
-//     console.log(cube(5))
-
-//     return element
-
-// }
-
-// let element = component()
-// document.body.appendChild(element);
+test.then(res => {
+    console.log('res: ', res)
+})
 
 
-// if(module.hot) {
-//     module.hot.accept('./print.js', function () {
-//         console.log('print.js接受更新...')
-//         // printMe()
-//         document.body.removeChild(element)
-//         element = component()
-//         document.body.appendChild(element)
-//     })
-// }
-
-let s = cube(3)
-console.log(s)
-console.log('这里是index.js')
+let arr = [1, 2, 3];
+console.log('...arr: ', [...arr]);
+// document.querySelector('#test').innerHTML = 'change DIV s content: 666'
