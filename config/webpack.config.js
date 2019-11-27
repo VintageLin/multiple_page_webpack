@@ -5,7 +5,7 @@ const entries = require('./config.entries')
 module.exports = {
   entry: entries.jsEntries,
   output: {
-    path: path.resolve(__dirname, '../dist'),
+    path: path.resolve(__dirname, '../build'),
     filename: 'js/[name].[hash].js'
   },
   module: {
