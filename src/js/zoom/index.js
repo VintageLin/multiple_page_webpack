@@ -1,3 +1,4 @@
+import '../../css/reset.css'
 import '../../css/zoom.css'
 console.log('index.js')
 import atest from './a'
