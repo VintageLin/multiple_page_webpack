@@ -32,7 +32,19 @@ const config = {
         },
         canPrint: true
       })
-    ]
+    ],
+    // 代码拆分
+    splitChunks: {
+      cacheGroups: {
+        // 打包node_modules中的文件
+        vendor: {
+          name: "vendor",
+          test: /[\\/]node_modules[\\/]/,
+          chunks: "all",
+          priority: 10
+        }
+      }
+    }
   }
 }
 

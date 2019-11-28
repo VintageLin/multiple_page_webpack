@@ -6,7 +6,8 @@ module.exports = {
   entry: entries.jsEntries,
   output: {
     path: path.resolve(__dirname, '../build'),
-    filename: 'js/[name].[hash].js'
+    filename: 'js/[name].[hash].js',
+    chunkFilename: 'js/[name].js'
   },
   module: {
     rules: [

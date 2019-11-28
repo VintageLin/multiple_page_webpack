@@ -15,9 +15,9 @@ let pagesName = htmlArray.map(item => {
 let htmlWebpackPluginArray = []
 pagesName.forEach(item => {
     htmlWebpackPluginArray.push(new htmlWebpackPlugin({
-        filename: `${item}.html`,
-        template: `./src/pages/${item}.html`,
-        chunks: [item]
+        filename: `${item}.html`,                   // 保存的文件名
+        template: `./src/pages/${item}.html`,       // 生成后的文件保存位置
+        chunks: ['vendor', item]                    // 这里是你页面需要引用到的js
     }))
 })
 
