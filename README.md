@@ -33,8 +33,9 @@
         |-- webpack.config.js                   // webpack基础设置
 ## 目的
 ---
-#### 这个项目主要的内容是 webpack 的打包配置，一个是为了自己学习webpack的一些基础配置方法，另外一个是为了解决自己之前想到的“ webpack 是如何打包普通多页面项目”的问题
-#### 目前这个webpack打包配置，还是处于能够完成一些非常简单的多页面打包，里面还有一些问题待解决或者优化
+
+##### 这个项目主要的内容是 webpack 的打包配置，一个是为了自己学习webpack的一些基础配置方法，另外一个是为了解决自己之前想到的“ webpack 是如何打包普通多页面项目”的问题
+##### 目前这个webpack打包配置，还是处于能够完成一些非常简单的多页面打包，里面还有一些问题待解决或者优化
 
 ## 一些需要注意的
 ```
@@ -43,6 +44,10 @@
  3. 页面的 css 是在 index.js 文件中 import 进来
  （本项目中的 src 目录下的文件均是在创建 webpack 配置时，测试所使用的）
 
+```
+## 不是很了解的问题
+```
+引用了polyfill后多出来了10几KB的内容
 ```
 
 ## 使用方法
@@ -56,7 +61,7 @@
 
 ```
 
-## package.json内使用到的插件的解释
+## package.json 中依赖的作用
 ```
 "dependencies": {
   "@babel/polyfill": "^7.7.0",                      // es6 的一些方法转换相关（对babel的使用暂时不是很了解）
@@ -82,7 +87,7 @@
   "postcss-loader": "^3.0.0",                       // 解析 css 并且使用相关插件对 css 进行操作
   "style-loader": "^1.0.0",                         // 将 css 插入到页面
   "uglifyjs-webpack-plugin": "^2.2.0",              // 压缩 js
-  "url-loader": "^2.3.0",                           // 可以实现将图片等文件转换为 base64（是 url-loader 的增强版）
+  "url-loader": "^2.3.0",                           // 可以实现将图片等文件转换为 base64（是 file-loader 的增强版）
   "webpack": "^4.41.2",
   "webpack-cli": "^3.3.10",
   "webpack-dev-server": "^3.9.0",
