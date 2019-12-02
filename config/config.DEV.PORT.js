@@ -12,7 +12,7 @@ module.exports = new Promise((resolve, reject) => {
       log(chalk.red('在当前设定的区间无可使用的端口！'))
       process.exit()
     } else {
-      log(chalk.green('当前DEV运行的端口：', res))
+      log(chalk.green('当前DEV可运行的端口：', res))
       resolve(res)
     }
   })

@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --config ./config/config.PROD.js",
-    "dev": "webpack-dev-server --inline --config ./config/config.DEV.js"
+    "build": "webpack --progress --config ./config/config.PROD.js",
+    "dev": "webpack-dev-server --progress --inline --config ./config/config.DEV.js"
   },
   "author": "",
   "license": "ISC",
@@ -32,6 +32,7 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
     "file-loader": "^4.3.0",
+    "friendly-errors-webpack-plugin": "^1.7.0",
     "glob": "^7.1.6",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
