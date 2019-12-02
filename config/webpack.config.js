@@ -9,6 +9,14 @@ module.exports = {
     filename: 'js/[name].[hash].js',
     chunkFilename: 'js/[name].js'
   },
+  // 控制台打印输出配置
+  stats: {
+    entrypoints: false,
+    chunks: false,
+    children: false,
+    chunkModules: true,
+    modules: false
+  },
   module: {
     rules: [
       {
@@ -44,10 +52,7 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-          
-        }
+        use: ['babel-loader?cacheDirectory=true', 'eslint-loader']
       },
       {
         test: /\.html$/,
