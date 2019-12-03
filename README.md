@@ -2,6 +2,7 @@
 ## 多页面普通项目的 webpack 配置
 
     |-- .babelrc                                // babel 配置文件
+    |-- .eslintrc.js                            // eslint 配置文件
     |-- .gitignore                              // git 忽略文件
     |-- package.json                            // 依赖配置文件
     |-- README.md                               // 自述文件
