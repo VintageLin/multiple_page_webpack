@@ -1,13 +1,13 @@
 # multiple_page_webpack
-## 多页面普通项目的webpack配置
+## 多页面普通项目的 webpack 配置
 
-    |-- .babelrc                                // babel配置文件
-    |-- .gitignore                              // Git忽略文件
+    |-- .babelrc                                // babel 配置文件
+    |-- .gitignore                              // git 忽略文件
     |-- package.json                            // 依赖配置文件
     |-- README.md                               // 自述文件
     |-- build                                   // 生成打包的目录
     |-- src                                     // 开发目录 （内为示例文件）
-    |   |-- css                                 // css样式目录
+    |   |-- css                                 // css 样式目录
     |   |   |-- index.css
     |   |   |-- reset.css
     |   |   |-- zoom.css
@@ -15,38 +15,38 @@
     |   |   |-- 1.jpg
     |   |   |-- 2.jpg
     |   |   |-- 3.jpg
-    |   |-- js                                  // js文件目录
+    |   |-- js                                  // js 文件目录
     |   |   |-- index
     |   |   |   |-- index.js
     |   |   |-- zoom
     |   |       |-- a.js
     |   |       |-- index.js
     |   |       |-- ok.js
-    |   |-- pages                               // html页面文件
+    |   |-- pages                               // html 页面文件
     |       |-- index.html
     |       |-- zoom.html
-    |-- webpack_config                          // webpack打包配置文件目录
-        |-- config.DEV.js                       // webpack开发环境设置
-        |-- config.DEV.PORT.js                  // webpack开发环境的端口自动分配
-        |-- config.entries.js                   // webpack的入口文件
-        |-- config.PROD.js                      // webpack生产环境配置
-        |-- webpack.config.js                   // webpack基础设置
+    |-- webpack_config                          // webpack 打包配置文件目录
+        |-- config.CONSTANT.js                  // webpack 的一些简单配置
+        |-- config.DEV.js                       // webpack 开发环境设置
+        |-- config.entries.js                   // webpack 的入口文件
+        |-- config.PROD.js                      // webpack 生产环境配置
+        |-- webpack.config.js                   // webpack 基础设置
 ## 目的
 
-##### 这个项目主要的内容是 webpack 的打包配置，一个是为了自己学习webpack的一些基础配置方法，另外一个是为了解决自己之前想到的“ webpack 是如何打包普通多页面项目”的问题
-##### 目前这个webpack打包配置，还是处于能够完成一些非常简单的多页面打包，里面还有一些问题待解决或者优化
+##### 这个项目主要的内容是 webpack 的打包配置，一个是为了自己学习 webpack 的一些基础配置方法，另外一个是为了解决自己之前想到的“ webpack 是如何打包普通多页面项目”的问题
+##### 目前这个 webpack 打包配置，还是处于能够完成一些非常简单的多页面打包，里面还有一些问题待解决或者优化
 
 ## 一些需要注意的
 ```
  1. js 目录下，需要创建与 pages 里面 html 文件名一样的文件夹，区分目录。
- 2. index.js 为每个页面唯一的入口文件，引用其他js文件则通过import引用进来
+ 2. index.js 为每个页面唯一的入口文件，引用其他js文件则通过 import 引用进来
  3. 页面的 css 是在 index.js 文件中 import 进来
  （本项目中的 src 目录下的文件均是在创建 webpack 配置时，测试所使用的）
 
 ```
 ## 不是很了解的问题
 ```
-引用了polyfill后多出来了10几KB的内容
+引用了 polyfill 后多出来了10几 KB 的内容
 ```
 
 ## 使用方法
@@ -63,7 +63,7 @@
 ## package.json 中依赖的作用
 ```
 "dependencies": {
-  "@babel/polyfill": "^7.7.0",                      // es6 的一些方法转换相关（对babel的使用暂时不是很了解）
+  "@babel/polyfill": "^7.7.0",                      // es6 的一些方法转换相关（对 babel 的使用暂时不是很了解）
   "@babel/runtime": "^7.7.4",
   "@babel/runtime-corejs2": "^7.7.4"
 },
@@ -76,6 +76,13 @@
   "chalk": "^3.0.0",                                // 控制台输出彩色打印
   "clean-webpack-plugin": "^3.0.0",                 // 清除打包目录
   "css-loader": "^3.2.0",                           // 对 css 的处理
+  "eslint": "^6.7.2",                               // eslint 代码检查(以下为eslint相关依赖)
+  "eslint-config-standard": "^14.1.0",
+  "eslint-loader": "^3.0.2",
+  "eslint-plugin-import": "^2.18.2",
+  "eslint-plugin-node": "^10.0.0",
+  "eslint-plugin-promise": "^4.2.1",
+  "eslint-plugin-standard": "^4.0.1",
   "file-loader": "^4.3.0",                          // 对引用的一些文件进行处理（这里暂时没用到）
   "glob": "^7.1.6",                                 // 遍历查找文件
   "html-loader": "^0.5.5",                          // 实现页面对资源的引用
