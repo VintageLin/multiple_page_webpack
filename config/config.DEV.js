@@ -18,6 +18,7 @@ const config = {
     quiet: true,
     host: CONSTANT.HOST
   },
+  devtool: 'source-map',
   plugins: []
 }
 

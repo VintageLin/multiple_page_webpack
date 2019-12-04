@@ -33,5 +33,5 @@ let arr1 = Array.from(arrayLike)
 console.log(arr1)
 
 var testEs = 1
-testEs = testEs + 1
+testEs = testEs + 1 + 2
 console.log(testEs)

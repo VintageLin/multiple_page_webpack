@@ -35,7 +35,7 @@ module.exports = {
             loader: 'postcss-loader',
             options: {
               plugins: [
-                require("autoprefixer")
+                require('autoprefixer')
               ]
             }
           }
@@ -63,10 +63,10 @@ module.exports = {
   resolve: {
     // 模块别名，方便import
     alias: {
-      '@': path.resolve(__dirname, './src')
+      '@': path.resolve(__dirname, '../src/')
     },
     // 自动解析扩展名
-    extensions: [".js", ".json"]
+    extensions: ['.js', '.json']
   },
   plugins: [
     // 页面模板

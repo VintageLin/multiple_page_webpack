@@ -1,7 +1,7 @@
 const { CleanWebpackPlugin } = require("clean-webpack-plugin")
 const merge = require('webpack-merge')
-const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const UglifyWebpackPlugin = require('uglifyjs-webpack-plugin');
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
+const UglifyWebpackPlugin = require('uglifyjs-webpack-plugin')
 const webpackUniversalConfig = require("./webpack.config.js")
 
 const config = {

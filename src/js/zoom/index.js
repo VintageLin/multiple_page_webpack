@@ -1,6 +1,7 @@
 import '../../css/reset.css'
 import '../../css/zoom.css'
 import atest from './a'
+import ok from '@/js/zoom/ok'
 console.log('index.js')
 
 var a = [1, 2, 3]
@@ -17,3 +18,5 @@ test.then(res => {
 })
 
 console.log(atest)
+
+ok.init()
