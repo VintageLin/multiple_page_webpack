@@ -2,6 +2,7 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin")
 const merge = require('webpack-merge')
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const UglifyWebpackPlugin = require('uglifyjs-webpack-plugin')
+const os = require('os')
 const webpackUniversalConfig = require("./webpack.config.js")
 
 const config = {
@@ -21,7 +22,14 @@ const config = {
     minimizer: [
       // js压缩
       new UglifyWebpackPlugin({
-        parallel: 4
+        parallel: os.cpus().length,
+        uglifyOptions: {
+          compress: {
+            drop_debugger: true,          //去掉debugger
+            drop_console: true,           // 去掉console
+            pure_funcs: ['console.log']
+          }
+        }
       }),
       // css压缩
       new OptimizeCssAssetsPlugin({
