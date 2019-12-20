@@ -77,5 +77,8 @@ module.exports = {
       chunkFilename: '[id].[hash].css',
       ignoreOrder: false
     })
-  ]
+  ],
+  externals: {
+    jquery: 'jQuery'
+  }
 }

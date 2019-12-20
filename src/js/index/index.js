@@ -1,4 +1,5 @@
 import '../../css/index.css'
+import $ from 'jquery'
 console.log('this is index pages alert')
 for (let i = 0; i < 10; i++) {
   console.log(i)
@@ -35,3 +36,7 @@ console.log(arr1)
 var testEs = 1
 testEs = testEs + 1 + 2
 console.log(testEs)
+
+setTimeout(() => {
+  $('#img1').fadeOut()
+}, 1000)
